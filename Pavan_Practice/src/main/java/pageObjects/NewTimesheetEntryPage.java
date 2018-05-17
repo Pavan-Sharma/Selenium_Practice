@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -103,10 +105,12 @@ public class NewTimesheetEntryPage extends TestBase implements Locators {
 		BTN_Save = bTN_Save;
 	}
 
-	//Fill new timesheet entry
+	//Fill new timesheet entry for past day.
 	public void fillTimesheetEntry(){
 		NewTimesheetEntryPage nt=new NewTimesheetEntryPage(TestBase.driver);
+		TestBase.driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 		nt.BTN_Save.click();
+		TestBase.driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 		System.out.println("After click on Add Timesheet");
 		
 	}
