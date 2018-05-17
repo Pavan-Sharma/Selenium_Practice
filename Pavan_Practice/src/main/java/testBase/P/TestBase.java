@@ -26,7 +26,8 @@ public static WebDriver driver;
 	               driver=new ChromeDriver();
 			
 			driver.manage().window().maximize();
-			driver.get("https://cygnet.hrinnova.com/admin/adddataentry.aspx/");
+			driver.get("https://www.google.com/");
+			//driver.get("https://cygnet.hrinnova.com/admin/adddataentry.aspx/");
 			//driver.get("http://enterprise.demo.orangehrmlive.com/symfony/web/index.php/auth/login");
 			
 			Reporter.log("=====Application Started=====", true);
